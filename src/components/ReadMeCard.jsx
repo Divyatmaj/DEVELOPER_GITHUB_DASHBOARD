@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import userConfig from "../config/userConfig.js"
 
 export default function Readme() {
   const [content, setContent] = useState("");
 
   useEffect(() => {
-    fetch("https://api.github.com/repos/DIVYATMAJ/DIVYATMAJ/readme")
+    fetch(`https://api.github.com/repos/${userConfig.githubUsername}/${userConfig.githubUsername}/readme`)
       .then((res) => res.json())
       .then((res) => {
         const decoded = atob(res.content);

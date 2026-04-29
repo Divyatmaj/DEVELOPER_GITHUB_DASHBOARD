@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react'
+import userConfig from "../config/userConfig.js"
 
 export default function RecentCard(){
 
@@ -27,7 +28,7 @@ export default function RecentCard(){
 
     //used thsi useEffect hook in order to fetch my Recent data
     useEffect(()=>{
-    fetch('https://api.github.com/users/DIVYATMAJ/events')
+    fetch(`https://api.github.com/users/${userConfig.githubUsername}/events`)
     .then((res)=>res.json())
     .then((res)=>setRecentData(res.slice(0, 5)))
     .catch((e)=>console.log("Could not fetch Recent activity Data,Error",e))

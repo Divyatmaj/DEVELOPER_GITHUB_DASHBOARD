@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react'
+import userConfig from "../config/userConfig.js"
 
 export default function UserCard(){
 
@@ -6,7 +7,7 @@ export default function UserCard(){
 
     //used thsi useEffect hook in order to fetch my User data
     useEffect(()=>{
-    fetch('https://api.github.com/users/DIVYATMAJ')
+    fetch(`https://api.github.com/users/${userConfig.githubUsername}`)
     .then((res)=>res.json())
     .then((res)=>setUserData(res))
     .catch((e)=>console.log("Could not fetch Github User Data,Error",e))
