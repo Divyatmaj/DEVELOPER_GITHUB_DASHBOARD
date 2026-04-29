@@ -1,16 +1,105 @@
-# React + Vite
+# 🚀 Developer GitHub Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A customizable React-based dashboard that gives a quick overview of any GitHub profile — including repositories, recent activity, and README.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ✨ Features
 
-## React Compiler
+* 📊 View GitHub profile (followers, following, profile link)
+* 📁 Display repositories with direct links
+* 🕒 Track recent GitHub activity
+* 📄 Render README from your profile repo
+* 🎨 Clean and customizable UI (WIP)
+* ⚡ Built using React + GitHub API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 How It Works
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This project fetches data directly from the GitHub API using your username and displays:
+
+* Profile information
+* Public repositories
+* Recent activity (events)
+* Profile README
+
+All data is dynamically loaded at runtime.
+
+---
+
+## 🔧 Customization (Very Easy)
+
+You can customize the entire website by editing just **one file**:
+
+```js
+// src/config/userConfig.js
+
+export default {
+  name: "Your Name",
+  githubUsername: "your-username",
+  bio: "Your bio",
+  accentColor: "#6366f1"
+};
+```
+
+### 🔥 That’s it.
+
+Change the `githubUsername` → the entire dashboard updates automatically.
+
+---
+
+## 🛠️ Tech Stack
+
+* React
+* JavaScript (ES6+)
+* GitHub REST API
+* CSS (custom styling)
+
+---
+
+## ⚙️ Setup & Run Locally
+
+```bash
+# Clone the repo
+git clone https://github.com/your-username/your-repo-name
+
+# Go into the project
+cd your-repo-name
+
+# Install dependencies
+npm install
+
+# Run the app
+npm run dev
+```
+
+---
+
+## ⚠️ API Rate Limit (Important)
+
+GitHub allows only **60 requests/hour (unauthenticated)**.
+
+If data stops loading:
+
+👉 Either wait or use a Personal Access Token.
+
+
+---
+
+## 📌 Future Improvements
+
+* Better UI/UX (animations, layout upgrades)
+* Dark/light theme toggle
+* Repo sorting & filtering
+* Language & stars display
+* Fully customizable themes
+* & much more?!
+
+---
+
+## 🤝 Contributing
+
+Feel free to fork the project and customize it for your own portfolio.
+
+---
