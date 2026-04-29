@@ -17,7 +17,7 @@ export default function Readme() {
   if (!content) return <p>Loading README...</p>;
 
   return (
-    <div style={{ backgroundColor: "black", color: "white", padding: "20px" }}>
+    <div className="readme-content">
         <ReactMarkdown rehypePlugins={[rehypeRaw]}>
         {content}
         </ReactMarkdown>
